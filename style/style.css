@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700&family=Josefin+Slab:ital,wght@0,100;0,200;0,300;1,100;1,200&family=Mulish:ital,wght@0,200;0,300;1,200;1,300&family=Oswald&family=Poppins:wght@100&family=Roboto+Condensed:wght@300&family=Rowdies&family=Sarala&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline: none;
+    list-style: none;
+}
+
+html,body{
+    overflow-x: hidden;
+}
+  
+/* parte da imagem */
+
+header{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.img-wrapper{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.img-wrapper img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    animation: Zoom 22s;
+}
+
+
+@keyframes Zoom {
+    0%{
+        transform: scale(1.3);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.banner{
+    position: absolute;
+    top: 30%;
+    left: 15%;
+}
+
+.banner h1{
+    color: rgb(196, 67, 67);
+    font-size: 2.0rem;
+    font-family: "Baloo Da 2", sans-serif;
+    text-shadow: .3rem .4rem 2px rgba(0, 0, 0, 0.4);
+    animation: moveBanner 1s;
+    cursor: pointer;
+}
+
+
+@keyframes moveBanner {
+    0%{
+        rotate: (-30g);
+        transform: translateY(10rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.banner p{
+    color: rgb(182, 194, 117);
+    font-family: 'Baloo Da 2', serif;
+    font-size: 1.5rem;
+    position: relative;
+    bottom: 0.5rem;
+    animation: moveBanner 0.8s;
+    cursor: pointer;
+}
+
+@keyframes mobeBanner {
+    0%{
+        transform: translateY(10rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+/* parte de conhecimentos de tecnologias */
+
+.conhecimentos{
+    display: flex;
+    padding: .5rem;
+    justify-content: space-evenly;
+    
+}
+
+.sessao-header{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+
+.sessao-header h1{
+    font-family: sans-serif;
+    font-size: 2rem;
+    color: black;
+    margin:1.5rem 0 ;
+    border-bottom: solid 3px rgb(45, 8, 116);
+}
+
+.sessao-conhecimento{
+    background-color: #f5f5f5;
+}
+
+.conhecimentos{
+    padding: 3rem;
+}
+
+.conhecimento-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #4b4b4b;
+    text-transform: uppercase;
+}
+
+.conhecimento-header h3{
+    margin: 1rem 0;
+    color:rgb(57, 57, 145);
+}
+
+.conhecimento-header i{
+    color: rgb(102, 26, 26);
+    font-size: 2.5rem;
+}
+
+.conhecimento-text{
+    width: 200px;
+    font-family: sans-serif;
+}
+
+@media (max-width:770px) {
+    .conhecimentos{
+        display: flex;
+        flex-direction: column;
+    }
+    .conhecimento-text{
+        margin: auto;
+    }
+    .conhecimento-header i{
+        margin-top: 1rem;
+    }
+}
+
+/* parte dos projetos */
+
+.projetos{
+    display: flex;
+    justify-content:space-around ;
+}
+
+.card{
+    width: 20rem;
+    height: 30rem;
+    position: relative;
+}
+
+.card-img-wrapper{
+    width: 100%;
+    height: 100%;
+}
+
+.card-img-wrapper img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: .5rem;
+}
+
+.card-info{
+    position: absolute;
+    bottom: 0;
+    padding: 2rem;
+    transition: all .3s;
+    text-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.4);
+}
+
+.card-info h2{
+    font-family: sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #f5f5f5;
+}
+
+.card-info h3{
+    font-family: sans-serif;
+    font-weight: bolder;
+    color: #f5f5f5;
+    margin-bottom: 1.5rem;
+}
+
+.card-info p{
+    font-family: sans-serif;
+    color: #f5f5f5;
+    width: 80%;
+    font-weight: 400;
+    position: relative;
+    bottom: 1rem;
+}
+
+@media (max-width:770px){
+    .projetos{
+        display: flex;
+        flex-direction: column;
+    }
+    .card-img-wrapper{
+        position: relative;
+        left: 1.5rem;
+    }
+}
+
+/* parte do rodapé */
+
+footer{
+    width: 100%;
+    height: 10rem;
+    background-color: #17181b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.footer-content{
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer-content p{
+    font-family: sans-serif;
+    color: #a7a7a7;
+    font-size: 1.2rem;
+}
+
+.social-list{
+    margin:  0 2rem;
+    color: #a7a7a7;
+    font-size: 1.3rem;
+}
+
+.social-list ul{
+    display: flex;
+}
+
+.social-list ul li i{
+    font-size: 2rem;
+    
+}
+
